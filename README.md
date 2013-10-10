@@ -3,6 +3,8 @@
 
 Bump an appcache manifest's timestamp.
 
+[![build status](https://secure.travis-ci.org/juliangruber/bump-manifest.png)](http://travis-ci.org/juliangruber/bump-manifest)
+
 When using appcache manifests you have to modify it when your resources
 changed, otherwise supporting browsers will keep your cached contents
 forever!
