@@ -1,0 +1,32 @@
+{
+  "name": "bump-manifest",
+  "description": "Bump an appcache manifest's timestamp to recache contents",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/juliangruber/bump-manifest.git"
+  },
+  "homepage": "https://github.com/juliangruber/bump-manifest",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "~1.1.1"
+  },
+  "keywords": [
+    "appcache",
+    "manifest",
+    "bump",
+    "version",
+    "timestamp",
+    "offline"
+  ],
+  "author": {
+    "name": "Julian Gruber",
+    "email": "mail@juliangruber.com",
+    "url": "http://juliangruber.com"
+  },
+  "license": "MIT"
+}
