@@ -1,8 +1,14 @@
 
 # bump-manifest
 
-Bump an appcache manifest's timestamp in order to force browsers to recache
-contents.
+Bump an appcache manifest's timestamp.
+
+When using appcache manifests you have to modify it when your resources
+changed, otherwise supporting browsers will keep your cached contents
+forever!
+
+This module inserts the current timestamp after the obligatory header
+in order to cause a resource reload.
 
 ## Example
 
@@ -13,6 +19,23 @@ var fs = require('fs');
 var manifest = fs.readFileSync(__dirname + '/man.appcache');
 fs.writeFileSync(__dirname + '/man.appcache', bump(manifest));
 ```
+
+If your old manifest was like this:
+
+```
+CACHE MANIFEST
+bundle.js
+```
+
+it now looks like that:
+
+```
+CACHE MANIFEST
+# 1381439992058
+bundle.js
+```
+
+And if it already had the timestamp, it has a new one now.
 
 ## Installation
 
